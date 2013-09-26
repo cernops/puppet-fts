@@ -21,18 +21,24 @@ https://svnweb.cern.ch/trac/fts3/wiki/AdminGuide
 
 Enable the FTS service with 
 
-     include('fts')
+```puppet
+include('fts')
+```
 
 All the standard settings can be set via hiera calls in the parmas.pp file. See that
 file for details. In particular this is where database connection parameters are set.
 
 There are two extra defined types both based on inifile provider.
 
-     fts3config{'/DbThreadsnNum': value => '100'} 
+```puppet
+fts3config{'/DbThreadsnNum': value => '100'} 
+```
 
 will edit a value in /etc/fts3/fts3config
 
-     fts3restcofnig{'server:main/port': value => '20000'}
+```puppet
+fts3restconfig{'server:main/port': value => '20000'}
+```
 
 can be used to set a value in /etc/fts3/fts3rest.ini
 
