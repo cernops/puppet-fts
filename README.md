@@ -1,13 +1,15 @@
-#Puppet module for File Transfer Service
+Puppet module for File Transfer Service
+=======================================
 
-##Overview
+Overview
+--------
 Puppet module to configure the FTS (File Transfer Service) version 3.
 For general configuration guide to the FTS see:
 
 https://svnweb.cern.ch/trac/fts3/wiki/AdminGuide
 
-##Setup
-###Setup Requirements
+Setup Requirements
+------------------
 * This configuration assumes a RHEL6 like distribution.
 * The puppetlabs-firewall module is used and must be available
 * The puppetlabs(or cprice404)-inifile module is used and must be avilable.
@@ -17,8 +19,8 @@ https://svnweb.cern.ch/trac/fts3/wiki/AdminGuide
 * host keys must be availble in the typical location
   /etc/grid-security/hostcert.pem and hostkey.
 
-###Usage
-
+Usage
+-----
 Enable the FTS service with 
 
 ```puppet
@@ -42,13 +44,16 @@ fts3restconfig{'server:main/port': value => '20000'}
 
 can be used to set a value in /etc/fts3/fts3rest.ini
 
-##License
+License
+-------
 Apache II licence.
 
-##Copyright
+Copyright
+---------
 Steve Traylen <steve.traylen@cern.ch> , CERN, 2013
 
-##Support and Patches
+Support and Patches
+-------------------
 https://github.com/cernops/puppet-fts
 
 
