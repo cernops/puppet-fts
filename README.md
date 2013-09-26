@@ -33,7 +33,7 @@ file for details. In particular this is where database connection parameters are
 There are two extra defined types both based on inifile provider.
 
 ```puppet
-fts3config{'/DbThreadsnNum': value => '100'} 
+fts3config{'/DbThreadsNum': value => '100'} 
 ```
 
 will edit a value in /etc/fts3/fts3config
