@@ -92,6 +92,16 @@ class fts::config (
        value => $rest_debug,
        before => Service['httpd'],
        notify => Service['httpd']
-  } 
+  }
+
+  # Enable automatic redirection for the monitoring
+  file{'/etc/httpd/conf.d/ftsmon-redirect.conf':
+      ensure   => present,
+      mode     => '0644',
+      content  => "RewriteEngine On\nRewriteRule ^/$ /fts3/ftsmon/ [R]",
+      before   => Service['httpd'],
+      notify   => Service['httpd'],
+      require  => Package['httpd']
+  }
 }
 
