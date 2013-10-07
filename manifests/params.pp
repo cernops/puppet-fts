@@ -15,6 +15,7 @@ class fts::params {
    $bdii_infosys      = hiera('fts3_bdii_infosys','lcg-bdii.cern.ch:2170')
    $host_alias        = hiera('fts3_host_alias',$::fqdn)
    $site_name         = hiera('fts3_site_name',"SITE_NAME")
+   $open_files        = hiera('fts3_open_files','16384')
 
    $fts3_repo         = hiera('fts3_fts_repo','http://grid-deployment.web.cern.ch/grid-deployment/dms/fts3/repos/el6/x86_64')
    $gfal2_repo        = hiera('fts3_gfal2_repo','http://grid-deployment.web.cern.ch/grid-deployment/dms/lcgutil/repos/el6/x86_64')
