@@ -1,5 +1,5 @@
 name    'cernops-fts'
-version '0.0.1'
+version '0.0.2'
 source 'https://github.com/cernops/puppet-fts'
 author 'Steve Traylen'
 license 'Apache License, Version 2.0'
