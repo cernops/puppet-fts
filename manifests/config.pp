@@ -106,5 +106,17 @@ class fts::config (
   limits::entry{'root-hard': type => 'hard', domain => 'root'}
   limits::entry{'fts3-hard': type => 'hard', domain => 'fts3'}
 
+  # Web services are quite chatty and compress well.
+  augeas{'httpd_logrorate':
+     incl    => '/etc/logrotate.d/httpd',
+     lens    => 'Logrotate.lns',
+     context => '/files/etc/logrotate.d/httpd/rule',
+     changes => ['set compress compress',
+                 'rm delaycompress'
+                ]
+  }
+
+
+
 }
 
