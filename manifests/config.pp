@@ -93,5 +93,15 @@ class fts::config (
        before => Service['httpd'],
        notify => Service['httpd']
   } 
+
+  # Web services are quite chatty and compress well.
+  augeas{'httpd_logrorate':
+     incl    => '/etc/logrotate.d/httpd',
+     lens    => 'Logrotate.lns',
+     context => '/files/etc/logrotate.d/httpd/rule',
+     changes => ['set compress compress',
+                 'rm delaycompress'
+                ]
+  }
 }
 
