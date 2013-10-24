@@ -103,5 +103,14 @@ class fts::config (
                  'rm delaycompress'
                 ]
   }
+
+  # Cron to purge old transfer logs.
+  cron{'purge_tansfer_files':
+    hour    => fqdn_rand(24),
+    minute  => fqdn_rand(60),
+    user    => root,
+    command => '/usr/sbin/tmpwatch -umc 20d /var/log/fts3/'
+  }
+
 }
 
