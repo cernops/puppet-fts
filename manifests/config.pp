@@ -109,7 +109,7 @@ class fts::config (
     hour    => fqdn_rand(24),
     minute  => fqdn_rand(60),
     user    => root,
-    command => '/usr/sbin/tmpwatch -umc 20d /var/log/fts3/'
+    command => '/usr/sbin/tmpwatch -umc 10d /var/log/fts3/'
   }
 
 }
