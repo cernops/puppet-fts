@@ -18,7 +18,6 @@ class fts::params {
   $open_files        = hiera('fts3_open_files','16384')
 
   $fts3_repo         = hiera('fts3_fts_repo','http://grid-deployment.web.cern.ch/grid-deployment/dms/fts3/repos/el6/x86_64')
-  $gfal2_repo        = hiera('fts3_gfal2_repo','http://grid-deployment.web.cern.ch/grid-deployment/dms/lcgutil/repos/el6/x86_64')
   $repo_includepkgs  = hiera('fts3_repo_includepkgs',['fts-*','gfal2-*','python-fts','srm-ifce'])
 
   # Specify ORACLE client packages if you need to, only relavent if db_type is oracle.
