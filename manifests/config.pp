@@ -61,6 +61,8 @@ class fts::config (
   fts3config{'/MonitoringMessaging': value => 'true'}
   fts3config{'roles/Public':         value => 'vo:transfer'}
   fts3config{'roles/production':     value => 'all:config'}
+  fts3config{'roles/lcgadmin':     value => 'vo:transfer'}
+
 
   # Maybe not needed with newer fts.
   #
@@ -97,6 +99,14 @@ class fts::config (
     notify => Service['httpd']
   }
 
+  # Apache Keep Alive on
+  apache_directive{'KeepAlive':
+    ensure => present,
+    args   => 'On',
+    notify => Service['httpd']
+  }
+
+
   # Increase the limits.conf
   Limits::Entry {
     item   => 'nofile',
@@ -122,7 +132,7 @@ class fts::config (
     hour    => fqdn_rand(24),
     minute  => fqdn_rand(60),
     user    => root,
-    command => '/usr/sbin/tmpwatch -umc 10d /var/log/fts3/'
+    command => '/usr/sbin/tmpwatch -mc 10d /var/log/fts3/[0-9]*'
   }
 
 }

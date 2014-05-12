@@ -2,9 +2,10 @@
 class fts::params {
   $port              = 8443
   $restport          = 8446
-  $logport           = 80
+  $logport           = 8449
   $version           = hiera('fts3_version','present')
   $rest_version      = hiera('fts3_rest_version','present')
+  $monitoring_version    = hiera('fts3_monitoring_version','present')
   $rest_debug        = hiera('fts3_rest_debug','false')
   $db_connect_string = hiera('fts3_db_connect_string',undef)
   $db_type           = hiera('fts3_db_type','mysql')
@@ -18,7 +19,6 @@ class fts::params {
   $open_files        = hiera('fts3_open_files','16384')
 
   $fts3_repo         = hiera('fts3_fts_repo','http://grid-deployment.web.cern.ch/grid-deployment/dms/fts3/repos/el6/x86_64')
-  $gfal2_repo        = hiera('fts3_gfal2_repo','http://grid-deployment.web.cern.ch/grid-deployment/dms/lcgutil/repos/el6/x86_64')
   $repo_includepkgs  = hiera('fts3_repo_includepkgs',['fts-*','gfal2-*','python-fts','srm-ifce'])
 
   # Specify ORACLE client packages if you need to, only relavent if db_type is oracle.
