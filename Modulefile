@@ -8,8 +8,8 @@ description 'Manages FTS Clients'
 project_page 'https://github.com/cernops/puppet-fts'
 
 ## Add dependencies, if any:
-dependency 'puppetlabs-inifile', '>=0'
-dependency 'cernops-fetchcrl', '>=0'
-dependency 'cernops-voms', '>=0'
-dependency 'erwbgy limits', '>=0'
-dependency 'domcleal-augeasproviders', '>=0'
+dependency 'puppetlabs/inifile', '>=0'
+dependency 'cernops/fetchcrl', '>=0'
+dependency 'cernops/voms', '>=0'
+dependency 'erwbgy/limits', '>=0'
+dependency 'domcleal/augeasproviders', '>=0'
