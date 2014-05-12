@@ -12,4 +12,4 @@ dependency 'puppetlabs-inifile', '>=0'
 dependency 'cernops-fetchcrl', '>=0'
 dependency 'cernops-voms', '>=0'
 dependency 'erwbgy limits', '>=0'
-
+dependency 'domcleal-augeasproviders', '>=0'
