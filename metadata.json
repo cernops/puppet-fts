@@ -1,47 +1,5 @@
 {
-  "source": "https://github.com/cernops/puppet-fts",
-  "dependencies": [
-    {
-      "version_requirement": ">=0",
-      "name": "puppetlabs/inifile"
-    },
-    {
-      "version_requirement": ">=0",
-      "name": "cernops/fetchcrl"
-    },
-    {
-      "version_requirement": ">=0",
-      "name": "cernops/voms"
-    },
-    {
-      "version_requirement": ">=0",
-      "name": "erwbgy/limits"
-    },
-    {
-      "version_requirement": ">=0",
-      "name": "domcleal/augeasproviders"
-    }
-  ],
-  "checksums": {
-    "manifests/params.pp": "e5135658b4c13f5d200caa891f11c390",
-    "lib/puppet/type/fts3config.rb": "a7998ee7ac265bb0ad8967320a53e449",
-    "README.md": "dca16ec22b42c5e1a4a6de3c9d6249d3",
-    "Gemfile": "e07d680dcd49f233e785cdc806ba04fa",
-    "manifests/install.pp": "b4674a6015207540a74822483faf9d44",
-    "manifests/service.pp": "e4142b5ea6914da6f963200047ca04b5",
-    "lib/puppet/provider/fts3restconfig/ini_setting.rb": "1c34201fc41731830ad6ce85e9067f89",
-    "Modulefile": "58db21288580a4eca6bc9ffcff14b47d",
-    "spec/spec_helper.rb": "3011a30b013ba2e44f7bf8615fdf2b8a",
-    "manifests/config.pp": "6f1a6a7f49dc7c4ef40620e3cd00b063",
-    "lib/puppet/type/fts3restconfig.rb": "ff611fde6ce8ae60c8b4eea89518bf34",
-    "lib/puppet/provider/fts3config/ini_setting.rb": "413fe4a213455c96ead25e6f5f1881a2",
-    "Rakefile": "ea715fe0328d4fb4bc6de3aae2d67b11",
-    "LICENSE": "19cbd64715b51267a47bf3750cc6a8a5",
-    "CHANGELOG": "8aae112224dd8f920be134e21ef19298",
-    "manifests/init.pp": "19556b2a691b51f4fa894ef99c2376ca"
-  },
   "author": "Steve Traylen",
-  "name": "CERNOps-fts",
   "types": [
     {
       "providers": [
@@ -96,9 +54,51 @@
       "name": "fts3restconfig"
     }
   ],
-  "version": "0.0.4",
+  "version": "0.0.5",
+  "dependencies": [
+    {
+      "version_requirement": ">= 0.0.0",
+      "name": "puppetlabs/inifile"
+    },
+    {
+      "version_requirement": ">= 0.0.0",
+      "name": "CERNOps/fetchcrl"
+    },
+    {
+      "version_requirement": ">= 0.0.0",
+      "name": "CERNOps/voms"
+    },
+    {
+      "version_requirement": ">= 0.0.0",
+      "name": "erwbgy/limits"
+    },
+    {
+      "version_requirement": ">= 0.0.0",
+      "name": "domcleal/augeasproviders"
+    }
+  ],
+  "name": "CERNOps-fts",
+  "source": "https://github.com/cernops/puppet-fts",
+  "checksums": {
+    "lib/puppet/type/fts3config.rb": "a7998ee7ac265bb0ad8967320a53e449",
+    "README.md": "dca16ec22b42c5e1a4a6de3c9d6249d3",
+    "manifests/params.pp": "e5135658b4c13f5d200caa891f11c390",
+    "manifests/init.pp": "19556b2a691b51f4fa894ef99c2376ca",
+    "lib/puppet/provider/fts3restconfig/ini_setting.rb": "1c34201fc41731830ad6ce85e9067f89",
+    "CHANGELOG": "224a24a74ceec83d0463d781b6dd0916",
+    "spec/spec_helper.rb": "3011a30b013ba2e44f7bf8615fdf2b8a",
+    "LICENSE": "19cbd64715b51267a47bf3750cc6a8a5",
+    "Modulefile": "4476c6cce18562adba27aff1c79ae443",
+    "Gemfile": "e07d680dcd49f233e785cdc806ba04fa",
+    "manifests/config.pp": "6f1a6a7f49dc7c4ef40620e3cd00b063",
+    "lib/puppet/provider/fts3config/ini_setting.rb": "413fe4a213455c96ead25e6f5f1881a2",
+    "Rakefile": "ea715fe0328d4fb4bc6de3aae2d67b11",
+    "manifests/service.pp": "e4142b5ea6914da6f963200047ca04b5",
+    "manifests/install.pp": "b4674a6015207540a74822483faf9d44",
+    "lib/puppet/type/fts3restconfig.rb": "ff611fde6ce8ae60c8b4eea89518bf34"
+  },
+  "summary": "Manages FTS Servers",
   "license": "Apache License, Version 2.0",
   "project_page": "https://github.com/cernops/puppet-fts",
-  "description": "Manages FTS Clients",
-  "summary": "Manages FTS Servers"
+  "description": "Manages FTS Clients"
 }

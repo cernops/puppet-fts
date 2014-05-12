@@ -1,5 +1,9 @@
 2014-05-12  Steve Traylen  <steve.traylen@cern.ch
     * 0.0.4 release
+    * correct module dependencies
+
+2014-05-12  Steve Traylen  <steve.traylen@cern.ch
+    * 0.0.4 release
     * correct module owner name.
 
 2014-05-12  Steve Traylen  <steve.traylen@cern.ch
