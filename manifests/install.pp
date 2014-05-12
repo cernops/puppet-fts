@@ -6,14 +6,29 @@ class fts::install (
   $repo_includepkgs = $fts::params::repo_includepkgs,
   $version          = $fts::params::version,
   $rest_version     = $fts::params::rest_version,
+  $monitoring_version = $fts::params::monitoring_version
 ) inherits fts::params {
 
   package{'httpd':
     ensure => present
   }
 
-  package{['fts-server','fts-client',"fts-${db_type}",'fts-libs','fts-monitoring']:
+  # Specify an order in case an explicit version is set.
+
+  package{['fts-server','fts-client','fts-libs','fts-infosys','fts-msg']:
     ensure  => $version,
+    require => Yumrepo['fts']
+  }
+  # The rpm dependency is present but we must get the correct
+  # version fts-libs in stalled first rather than as a
+  # dependency of fts-mysql.
+  package{"fts-${db_type}":
+    ensure  => $version,
+    require => Package['fts-libs']
+  }
+
+  package{['fts-monitoring','fts-monitoring-selinux']:
+    ensure  => $monitoring_version,
     require => Yumrepo['fts']
   }
   package{['fts-rest','fts-rest-selinux']:

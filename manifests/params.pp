@@ -5,6 +5,7 @@ class fts::params {
   $logport           = 8449
   $version           = hiera('fts3_version','present')
   $rest_version      = hiera('fts3_rest_version','present')
+  $monitoring_version    = hiera('fts3_monitoring_version','present')
   $rest_debug        = hiera('fts3_rest_debug','false')
   $db_connect_string = hiera('fts3_db_connect_string',undef)
   $db_type           = hiera('fts3_db_type','mysql')
