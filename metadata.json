@@ -1,0 +1,103 @@
+{
+  "checksums": {
+    "manifests/service.pp": "e4142b5ea6914da6f963200047ca04b5",
+    "manifests/install.pp": "b4674a6015207540a74822483faf9d44",
+    "lib/puppet/type/fts3config.rb": "a7998ee7ac265bb0ad8967320a53e449",
+    "Rakefile": "ea715fe0328d4fb4bc6de3aae2d67b11",
+    "manifests/params.pp": "e5135658b4c13f5d200caa891f11c390",
+    "Modulefile": "8725d43868cef10a06187da4d327b39b",
+    "lib/puppet/provider/fts3config/ini_setting.rb": "413fe4a213455c96ead25e6f5f1881a2",
+    "Gemfile": "e07d680dcd49f233e785cdc806ba04fa",
+    "README.md": "dca16ec22b42c5e1a4a6de3c9d6249d3",
+    "LICENSE": "19cbd64715b51267a47bf3750cc6a8a5",
+    "spec/spec_helper.rb": "3011a30b013ba2e44f7bf8615fdf2b8a",
+    "lib/puppet/provider/fts3restconfig/ini_setting.rb": "1c34201fc41731830ad6ce85e9067f89",
+    "lib/puppet/type/fts3restconfig.rb": "ff611fde6ce8ae60c8b4eea89518bf34",
+    "manifests/config.pp": "6f1a6a7f49dc7c4ef40620e3cd00b063",
+    "manifests/init.pp": "19556b2a691b51f4fa894ef99c2376ca"
+  },
+  "author": "Steve Traylen",
+  "name": "CERNops-fts",
+  "version": "0.0.3",
+  "license": "Apache License, Version 2.0",
+  "description": "Manages FTS Clients",
+  "dependencies": [
+    {
+      "version_requirement": ">=0",
+      "name": "puppetlabs/inifile"
+    },
+    {
+      "version_requirement": ">=0",
+      "name": "cernops/fetchcrl"
+    },
+    {
+      "version_requirement": ">=0",
+      "name": "cernops/voms"
+    },
+    {
+      "version_requirement": ">=0",
+      "name": "erwbgy/limits"
+    },
+    {
+      "version_requirement": ">=0",
+      "name": "domcleal/augeasproviders"
+    }
+  ],
+  "types": [
+    {
+      "providers": [
+        {
+          "doc": "",
+          "name": "ini_setting"
+        }
+      ],
+      "properties": [
+        {
+          "doc": "The basic property that the resource should be in.\n\nValid values are `present`, `absent`. ",
+          "name": "ensure"
+        },
+        {
+          "doc": "The value of the setting to be defined.\n\n",
+          "name": "value"
+        }
+      ],
+      "parameters": [
+        {
+          "doc": "Section/setting name to manage from fts3config\n\nValues can match `/\\S*\\/\\S+/`.",
+          "name": "name"
+        }
+      ],
+      "doc": "",
+      "name": "fts3config"
+    },
+    {
+      "providers": [
+        {
+          "doc": "",
+          "name": "ini_setting"
+        }
+      ],
+      "properties": [
+        {
+          "doc": "The basic property that the resource should be in.\n\nValid values are `present`, `absent`. ",
+          "name": "ensure"
+        },
+        {
+          "doc": "The value of the setting to be defined.\n\n",
+          "name": "value"
+        }
+      ],
+      "parameters": [
+        {
+          "doc": "Section/setting name to manage from fts3rest.ini config\n\nValues can match `/\\S*\\/\\S+/`.",
+          "name": "name"
+        }
+      ],
+      "doc": "",
+      "name": "fts3restconfig"
+    }
+  ],
+  "source": "https://github.com/cernops/puppet-fts",
+  "summary": "Manages FTS Servers",
+  "project_page": "https://github.com/cernops/puppet-fts"
+}
