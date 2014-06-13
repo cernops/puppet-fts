@@ -15,7 +15,7 @@ class fts::install (
 
   # Specify an order in case an explicit version is set.
 
-  package{['fts-server','fts-client','fts-libs','fts-infosys','fts-msg']:
+  package{['fts-server','fts-client','fts-libs','fts-infosys','fts-msg','fts-server-selinux']:
     ensure  => $version,
     require => Yumrepo['fts']
   }
