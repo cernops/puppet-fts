@@ -1,8 +1,8 @@
 #Class: fts::params
 class fts::params {
-  $port              = 8443
-  $restport          = 8446
-  $logport           = 8449
+  $port              = hiera('port',8443)
+  $restport          = hiera('restport',8446)
+  $logport           = hiera('logport',8449)
   $version           = hiera('fts3_version','present')
   $rest_version      = hiera('fts3_rest_version','present')
   $monitoring_version    = hiera('fts3_monitoring_version','present')
