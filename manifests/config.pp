@@ -90,7 +90,7 @@ class fts::config (
                 "set PASSWORD ${msg_password}",
                 "set USERNAME ${msg_username}"
     ],
-    notify  => [Service['fts-msg-bulk'],Service['fts-msg-cron']],
+    notify  => Service['fts-msg-bulk'],
   }
 
   fts3restconfig{'DEFAULT/debug':
