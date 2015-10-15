@@ -17,10 +17,6 @@ class fts::service {
     ensure => running,
     enable => true,
   }
-  service{'fts-msg-cron':
-    ensure => running,
-    enable => true,
-  }
   service{'fts-bdii-cache-updater':
     ensure => running,
     enable => true,
